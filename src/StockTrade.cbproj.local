@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899-12-30 00:00:00.000.883,=D:\work\Builder\Berlin\01.Study PJT\src\Unit1.cpp</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.940,=D:\work\Builder\Berlin\01.Study PJT\src\Unit1.cpp</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.073,=D:\work\Builder\Berlin\01.Study PJT\src\Unit1.cpp</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.650,D:\work\Builder\Berlin\01.Study PJT\src\Unit1.cpp=D:\work\Builder\Berlin\01.Study PJT\src\THRclient.cpp</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.884,D:\work\Builder\Berlin\01.Study PJT\src\Unit1.cpp=D:\work\Builder\Berlin\01.Study PJT\src\CLSstcokIF.cpp</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.653,=C:\Users\gildong\Documents\Embarcadero\Studio\Projects\Project1PCH1.h</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.296,=C:\Users\gildong\Documents\Embarcadero\Studio\Projects\Project1PCH1.h</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.672,C:\Users\gildong\Documents\Embarcadero\Studio\Projects\Project1PCH1.h=D:\work\Builder\Berlin\01.Study PJT\src\Project1PCH1.h</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.310,=D:\work\Builder\Berlin\01.Study PJT\src\Unit1.cpp</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.107,C:\Users\gildong\Documents\Embarcadero\Studio\Projects\Unit1.dfm=D:\work\Builder\Berlin\01.Study PJT\src\Unit1.dfm</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.488,D:\work\Builder\Berlin\01.Study PJT\src\Unit1.h=D:\work\Builder\Berlin\01.Study PJT\src\StockDB.h</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.616,D:\work\Builder\Berlin\01.Study PJT\src\Unit1.h=D:\work\Builder\Berlin\01.Study PJT\src\StockMain.h</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.884,D:\work\Builder\Berlin\01.Study PJT\src\Unit1.h=D:\work\Builder\Berlin\01.Study PJT\src\CLSstcokIF.h</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.806,D:\work\Builder\Berlin\01.Study PJT\src\Unit1.h=D:\work\Builder\Berlin\01.Study PJT\src\CPstock.h</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.650,D:\work\Builder\Berlin\01.Study PJT\src\Unit1.h=D:\work\Builder\Berlin\01.Study PJT\src\THRclient.h</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.806,D:\work\Builder\Berlin\01.Study PJT\src\Unit1.cpp=D:\work\Builder\Berlin\01.Study PJT\src\CPstock.cpp</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.488,D:\work\Builder\Berlin\01.Study PJT\src\Unit1.cpp=D:\work\Builder\Berlin\01.Study PJT\src\StockDB.cpp</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.616,D:\work\Builder\Berlin\01.Study PJT\src\Unit1.cpp=D:\work\Builder\Berlin\01.Study PJT\src\StockMain.cpp</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.243,D:\work\Builder\Berlin\01.Study PJT\src\StockDB.cpp=D:\work\Builder\Berlin\01.Study PJT\src\inc\StockDB.cpp</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.107,C:\Users\gildong\Documents\Embarcadero\Studio\Projects\Unit1.h=D:\work\Builder\Berlin\01.Study PJT\src\Unit1.h</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.878,D:\work\Builder\Berlin\01.Study PJT\src\THRclient.cpp=D:\work\Builder\Berlin\01.Study PJT\src\CPstock\THRclient.cpp</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.878,D:\work\Builder\Berlin\01.Study PJT\src\THRclient.h=D:\work\Builder\Berlin\01.Study PJT\src\CPstock\THRclient.h</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.231,D:\work\Builder\Berlin\01.Study PJT\src\CPstock.cpp=D:\work\Builder\Berlin\01.Study PJT\src\CPstock\CPstock.cpp</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.531,D:\work\Builder\Berlin\01.Study PJT\src\Project1PCH1.h=D:\work\Builder\Berlin\01.Study PJT\src\StockDealPCH1.h</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.231,D:\work\Builder\Berlin\01.Study PJT\src\CPstock.h=D:\work\Builder\Berlin\01.Study PJT\src\CPstock\CPstock.h</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.616,D:\work\Builder\Berlin\01.Study PJT\src\Unit1.dfm=D:\work\Builder\Berlin\01.Study PJT\src\StockMain.dfm</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.492,=D:\work\Builder\Berlin\01.Study PJT\src\GenLib\CLStcp.cpp</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.263,=D:\work\Builder\Berlin\01.Study PJT\src\inc\General.h</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.050,D:\work\Builder\Berlin\01.Study PJT\src\CLSstcokIF.cpp=D:\work\Builder\Berlin\01.Study PJT\src\CPstock\CLSstcokIF.cpp</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.050,D:\work\Builder\Berlin\01.Study PJT\src\CLSstcokIF.h=D:\work\Builder\Berlin\01.Study PJT\src\CPstock\CLSstcokIF.h</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.542,D:\work\Builder\Berlin\01.Study PJT\src\Project1.cbproj=D:\work\Builder\Berlin\01.Study PJT\src\StockDeal.cbproj</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.483,C:\Users\gildong\Documents\Embarcadero\Studio\Projects\Project1.cbproj=D:\work\Builder\Berlin\01.Study PJT\src\Project1.cbproj</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.243,D:\work\Builder\Berlin\01.Study PJT\src\StockDB.h=D:\work\Builder\Berlin\01.Study PJT\src\inc\StockDB.h</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.482,=D:\work\Builder\Berlin\01.Study PJT\src\GenLib\CLStbObject.cpp</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.107,C:\Users\gildong\Documents\Embarcadero\Studio\Projects\Unit1.cpp=D:\work\Builder\Berlin\01.Study PJT\src\Unit1.cpp</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.472,=D:\work\Builder\Berlin\01.Study PJT\src\GenLib\CLSlog.cpp</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.353,=C:\Users\gildong\Documents\Embarcadero\Studio\Projects\Unit1.cpp</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.670,=C:\Users\gildong\Documents\Embarcadero\Studio\Projects\Unit1.cpp</Transaction>
+    <Transaction>2017-10-27 10:18:19.275,=D:\Work\Study\01.Study PJT\src\File1.h</Transaction>
+    <Transaction>2017-10-27 10:18:25.082,D:\Work\Study\01.Study PJT\src\Define.h=D:\Work\Study\01.Study PJT\src\File1.h</Transaction>
+    <Transaction>2017-10-27 10:19:36.505,D:\Work\Study\01.Study PJT\src\inc\Define.h=D:\Work\Study\01.Study PJT\src\Define.h</Transaction>
+    <Transaction>2017-10-27 14:48:54.132,D:\Work\Study\01.Study PJT\src\StockTradePCH1.h=D:\Work\Study\01.Study PJT\src\StockDealPCH1.h</Transaction>
+    <Transaction>2017-10-27 14:48:54.218,D:\Work\Study\01.Study PJT\src\StockTrade.cbproj=D:\Work\Study\01.Study PJT\src\StockDeal.cbproj</Transaction>
+  </Transactions>
+	<ProjectSortOrder AutoSort="0" SortType="0">
+    <File Path="CPstock"/>
+    <File Path="CPstock\CLSstcokIF.cpp"/>
+    <File Path="CPstock\CLSstcokIF.cpp"/>
+    <File Path="CPstock\CLSstcokIF.h"/>
+    <File Path="CPstock\CPstock.cpp"/>
+    <File Path="CPstock\CPstock.cpp"/>
+    <File Path="CPstock\CPstock.h"/>
+    <File Path="CPstock\THRclient.cpp"/>
+    <File Path="CPstock\THRclient.cpp"/>
+    <File Path="CPstock\THRclient.h"/>
+    <File Path="GenLib"/>
+    <File Path="GenLib\CLSlog.cpp"/>
+    <File Path="GenLib\CLSlog.cpp"/>
+    <File Path="GenLib\CLSlog.h"/>
+    <File Path="GenLib\CLStbObject.cpp"/>
+    <File Path="GenLib\CLStbObject.cpp"/>
+    <File Path="GenLib\CLStbObject.h"/>
+    <File Path="GenLib\CLStcp.cpp"/>
+    <File Path="GenLib\CLStcp.cpp"/>
+    <File Path="GenLib\CLStcp.h"/>
+    <File Path="inc"/>
+    <File Path="inc\Define.h"/>
+    <File Path="inc\General.h"/>
+    <File Path="inc\StockDB.cpp"/>
+    <File Path="inc\StockDB.cpp"/>
+    <File Path="inc\StockDB.h"/>
+    <File Path="StockTrade.cpp"/>
+    <File Path="StockMain.cpp"/>
+    <File Path="StockMain.cpp"/>
+    <File Path="StockMain.dfm"/>
+    <File Path="StockMain.h"/>
+    <File Path="StockTradePCH1.h"/>
+  </ProjectSortOrder>
+</BorlandProject>

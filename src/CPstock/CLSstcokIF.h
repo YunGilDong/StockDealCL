@@ -45,6 +45,11 @@ typedef struct
 	int seq;
 	bool readyHeart;    			// Heartbeat를 수신했을때
 } MSG_CNTL;
+//------------------------------------------------------------------------------
+// RX_STATE
+//------------------------------------------------------------------------------
+typedef enum { COMST_STX1, COMST_STX2, COMST_SIZE1,COMST_SIZE2, COMST_DATA } RX_STATE;
+//------------------------------------------------------------------------------
 //---------------------------------------------------------------------------
 // Class
 //---------------------------------------------------------------------------
@@ -53,11 +58,25 @@ class CLSstockIF : public CLStcp
 private:
 	MSG_CNTL m_msgCnt;
 	time_t m_curClock;
+    int m_length;
+	int m_tally;
+    int m_index;
 	int m_txSeq;
 	int m_rxSeq;
 	struct timeval	m_checkTimer;
+	RX_STATE m_state;
+	char m_message[TCPBUF_LEN];
+
 
 	CON_RESULT	__fastcall ManageConnection(void);
+	BYTE __fastcall GenLRC(char *message, int length);
+	void __fastcall SetRxState(RX_STATE state, int delta = 0);
+    bool __fastcall ManageRX(void);
+	bool __fastcall ManageTX(void);
+	void __fastcall RxHandler(char *buffer, int length);
+    void __fastcall MsgHandler(void);
+	bool __fastcall SendMessage(BYTE code, int length, char *info);
+	void __fastcall PrcTradeSignal(void);
 
 public:
 	__fastcall CLSstockIF(void);
@@ -69,11 +88,11 @@ public:
 	void __fastcall CloseNetwork(char *message);
 	bool __fastcall Manage(void);
 
-	bool __fastcall ManageRX(void);
-	bool __fastcall ManageTX(void);
-    bool __fastcall SendMessage(BYTE code, int length, char *info);
+
 
 	bool __fastcall SendEcho(char *str);
 	bool __fastcall SendHeartBeat(void);
+	bool __fastcall SendACK(BYTE code);
+	bool __fastcall SendNACK(BYTE code);
 };
 #endif

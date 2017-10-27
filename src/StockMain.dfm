@@ -2,8 +2,8 @@ object StockMainF: TStockMainF
   Left = 0
   Top = 0
   Caption = 'StockMainF'
-  ClientHeight = 311
-  ClientWidth = 850
+  ClientHeight = 363
+  ClientWidth = 826
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -19,6 +19,20 @@ object StockMainF: TStockMainF
     Width = 8
     Height = 13
     Caption = '--'
+  end
+  object Label1: TLabel
+    Left = 24
+    Top = 104
+    Width = 54
+    Height = 13
+    Caption = 'RECV INFO'
+  end
+  object Label2: TLabel
+    Left = 417
+    Top = 104
+    Width = 54
+    Height = 13
+    Caption = 'SEND INFO'
   end
   object btnEcho: TButton
     Left = 16
@@ -46,16 +60,16 @@ object StockMainF: TStockMainF
     TabOrder = 2
   end
   object lbLog: TListBox
-    Left = 8
-    Top = 80
+    Left = 16
+    Top = 128
     Width = 395
     Height = 223
     ItemHeight = 13
     TabOrder = 3
   end
   object lbSendLog: TListBox
-    Left = 409
-    Top = 80
+    Left = 417
+    Top = 128
     Width = 395
     Height = 223
     ItemHeight = 13

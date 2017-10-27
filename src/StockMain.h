@@ -26,6 +26,8 @@ __published:	// IDE-managed Components
 	TLabel *lbCommSt;
 	TListBox *lbLog;
 	TListBox *lbSendLog;
+	TLabel *Label1;
+	TLabel *Label2;
 	void __fastcall tmTcpStTimer(TObject *Sender);
 	void __fastcall btnEchoClick(TObject *Sender);
 private:	// User declarations
