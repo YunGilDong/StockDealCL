@@ -39,11 +39,9 @@
 //---------------------------------------------------------------------------
 typedef struct
 {
-	int heartTime;					// 전송 주기 시간(second)
 	struct timeval heartSendTime;   // Heart 전송 시각
 	char message[TCPBUF_LEN];
 	int seq;
-	bool readyHeart;    			// Heartbeat를 수신했을때
 } MSG_CNTL;
 //------------------------------------------------------------------------------
 // RX_STATE

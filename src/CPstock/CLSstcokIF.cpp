@@ -22,18 +22,19 @@ extern CLSlog Log;
 __fastcall CLSstockIF::CLSstockIF(void)
 {
 	//Log = CLSlog("STOCKCL", )
+	InitComState();
 }
 //---------------------------------------------------------------------------
 __fastcall CLSstockIF::CLSstockIF(const char *name, int port, const char *ipAddr, TCP_MODE mode)
 	:CLStcp(name, port, ipAddr, mode)
 {
-
+	InitComState();
 }
 //---------------------------------------------------------------------------
 __fastcall CLSstockIF::CLSstockIF(const char *name, int port, SOCKET id, TCP_MODE mode)
 	:CLStcp(name, port, id, mode)
 {
-
+	InitComState();
 }
 //---------------------------------------------------------------------------
 // ~CLSstockIF
@@ -62,7 +63,7 @@ CON_RESULT	__fastcall  CLSstockIF::ManageConnection(void)
 	if((status = Connect()) == CON_OK)
 	{
 		Log.Write("Connected");
-		//InitComState(true);
+		InitComState(true);
 		Log.Write("InitComState OK");
 	}
 	return (status);
@@ -101,8 +102,6 @@ void __fastcall CLSstockIF::SetRxState(RX_STATE state, int delta)
 //---------------------------------------------------------------------------
 void __fastcall CLSstockIF::InitComState(bool connected)
 {
-	m_msgCnt.heartTime = 5;	// 5√ 
-	m_msgCnt.readyHeart = false;
 	m_txSeq = 0;
 	m_rxSeq = 0;
 	SetRxState(COMST_STX1);
