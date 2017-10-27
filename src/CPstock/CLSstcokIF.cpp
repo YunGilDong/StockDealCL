@@ -105,6 +105,7 @@ void __fastcall CLSstockIF::InitComState(bool connected)
 	m_msgCnt.readyHeart = false;
 	m_txSeq = 0;
 	m_rxSeq = 0;
+	SetRxState(COMST_STX1);
 }
 //---------------------------------------------------------------------------
 // CloseNetwork
