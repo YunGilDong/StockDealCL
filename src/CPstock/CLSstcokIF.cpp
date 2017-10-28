@@ -51,7 +51,7 @@ CON_RESULT	__fastcall  CLSstockIF::ManageConnection(void)
 	CON_RESULT	status;
 	if(Connected)
 	{
-		Log.Write("Conn OK");
+		//Log.Write("Conn OK");
 		return (CON_OK);
 	}
 
@@ -170,7 +170,7 @@ bool __fastcall CLSstockIF::ManageRX(void)
 
 		return ((count < 0 )?false : true);
 	}
-
+	RxHandler(buffer, count);
 	//Log.Write("RECV : %s [%d]", buffer, count);
 	//Log.FLdump("RX DATA", buffer, count, count);
 	Message.str.printf("RECV:[%s]", buffer);
@@ -201,6 +201,7 @@ void __fastcall CLSstockIF::RxHandler(char *buffer, int length)
 	{
 		dPtr = &m_message[m_tally];
 		sPtr = buffer+m_index;
+		//sPtr = &buffer[m_index];
 		switch(m_state)
 		{
 		case COMST_STX1:
@@ -222,11 +223,14 @@ void __fastcall CLSstockIF::RxHandler(char *buffer, int length)
 		case COMST_SIZE1:
 			*dPtr = *sPtr;
 			SetRxState(COMST_SIZE2, 1);
+			break;
 		case COMST_SIZE2:
 			*dPtr = *sPtr;
-			m_length = GetNumber(dPtr-1);
+			m_length = GetNumber(dPtr-1, 2);
+			//m_length = GetNumber(&m_message[SIZE1],2);
 			m_length += HEARD_LEN;
 			SetRxState(COMST_DATA, 1);
+			break;
 		case COMST_DATA:
 			remain = length - m_index;
 			request = m_length - m_tally;
@@ -237,7 +241,7 @@ void __fastcall CLSstockIF::RxHandler(char *buffer, int length)
 				SetRxState(COMST_DATA, request);
 			}
 			if(m_tally < m_length)
-				break;
+			 	break;
 
 			MsgHandler();
 		default:    SetRxState(COMST_STX1, 1); break;
@@ -314,21 +318,24 @@ bool __fastcall CLSstockIF::SendMessage(BYTE code, int length, char *info)
 void __fastcall CLSstockIF::PrcTradeSignal(void)
 {
 	int idx = 0;
+	int sigTime;
 	char buffer[TCPBUF_LEN];
 	memcpy(buffer, &m_message[DATA], m_length-HEARD_LEN);
 	TDINFO.type = buffer[idx];      idx += 1;
-	TDINFO.mon = buffer[idx];       idx += 1;
-	TDINFO.day = buffer[idx];       idx += 1;
-	TDINFO.hour = buffer[idx];      idx += 1;
-	TDINFO.minute = buffer[idx];    idx += 1;
-	snprintf(TDINFO.stockCode, 7, &buffer[idx]);    idx += 7;
-	snprintf(TDINFO.stockNm, 32, &buffer[idx]);    idx += 32;
+
+	sigTime = GetNumber(&buffer[idx], 4);
+	TDINFO.minute = sigTime % 100;    sigTime /= 100;
+	TDINFO.hour = sigTime % 100;      sigTime /= 100;
+	TDINFO.day = sigTime % 100;   	  sigTime /= 100;
+	TDINFO.mon = sigTime % 100;		  idx += 4;
+	memcpy(TDINFO.stockCode, &buffer[idx], 7);      idx += 7;
+	memcpy(TDINFO.stockNm, &buffer[idx], 32);    	idx += 32;
 	TDINFO.price = GetNumber(&buffer[idx], 4);      idx += 4;
 
-	Log.Write("[%c]\t[%d]:[%d]:[%d]\t[%s][%s] : [%d]"
+	Log.Write("[%c]\t[%d]:[%d]:[%d]:[%d]\t[%s][%s] : [%d]"
 		, TDINFO.type, TDINFO.mon, TDINFO.day, TDINFO.hour, TDINFO.minute, TDINFO.stockCode,TDINFO.stockNm, TDINFO.price);
 
-	Message.str.printf("[TradeSignal] [%c]\t[%d]:[%d]:[%d]\t[%s][%s] : [%d]"
+	Message.str.printf("[TradeSignal] [%c]\t[%d]:[%d]:[%d]:[%d]\t[%s][%s] : [%d]"
 		, TDINFO.type, TDINFO.mon, TDINFO.day, TDINFO.hour, TDINFO.minute, TDINFO.stockCode,TDINFO.stockNm, TDINFO.price);
 	PostMessage(StockMainF->Handle, WM_MSGLOG, (WPARAM)0, (LPARAM)0);
 

@@ -60,8 +60,8 @@ object StockMainF: TStockMainF
     TabOrder = 2
   end
   object lbLog: TListBox
-    Left = 16
-    Top = 128
+    Left = 0
+    Top = 132
     Width = 395
     Height = 223
     ItemHeight = 13

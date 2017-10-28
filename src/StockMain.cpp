@@ -27,8 +27,9 @@ __fastcall TStockMainF::TStockMainF(TComponent* Owner)
 	LogDir.printf("%s\\log", LogDir.c_str());
 //	SetCurrentDirectory(LogDir.c_str());
 
-	Log = CLSlog("STOCKCL", LogDir.c_str());
-    Log.Write("Process start");
+	//Log = CLSlog("STOCKCL", LogDir.c_str());
+	Log = CLSlog("STOCKCL", "D:\\work\\Builder\\Berlin\\01.Study PJT_\\bin\\log");
+	Log.Write("Process start");
 
 	mTcpSt = false;
 	//Pstock = new CPstock(commEnv.ip, commEnv.port);
